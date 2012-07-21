@@ -1,6 +1,12 @@
 # This file is app/controllers/movies_controller.rb
-class MoviesController < ActionController
+class MoviesController < ApplicationController
   def index
     @movies = Movie.all  
+  end
+  
+  def show
+    id=params[:id]
+    @movie=Movie.find(id)
+     
   end
 end
